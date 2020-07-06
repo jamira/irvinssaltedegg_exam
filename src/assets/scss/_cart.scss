@@ -1,0 +1,125 @@
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid $border-color;
+            border-bottom-style: none;
+            line-height: 2.5;
+    
+            div {
+                &.heading-1 { flex: 0 0 33.333333%; }
+                &.heading-2, &.heading-3, &.heading-4 { flex: 0 0 16.666667%; }
+            }
+        }
+
+        // .items {
+        //     .item {
+        //         flex-direction: column;
+        //     }
+        // }
+
+        // .items {
+        //     display: flex;
+        //     flex-flow: column wrap;
+    
+        //     .item {
+        //         font-family: 'helveticabold';
+        //         padding: 1.25rem;
+        //         display: flex;
+        //         align-items: center;
+        //         border-width: 5px;
+        //         border-style: solid;
+        //         border-color: $border-color;
+    
+        //         + .item {
+        //             border-top: 0 none;
+        //           }
+    
+        //         .qty-box {
+        //             width: 100px;
+        //             box-sizing: border-box;
+        //             text-align: center;
+        //             padding: 0.625rem
+        //         }  
+        //     }
+        // }
+
+@media screen and (min-width: 959px) { 
+    .shopping-cart {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        
+        .items {
+            display: flex;
+            flex-flow: column wrap;
+    
+            .item {
+                font-family: 'helveticabold';
+                padding: 1.25rem;
+                display: flex;
+                align-items: center;
+                border-width: 5px;
+                border-style: solid;
+                border-color: $border-color;
+    
+                + .item {
+                    border-top: 0 none;
+                  }
+    
+                .qty-box {
+                    width: 100px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    padding: 0.625rem
+                }  
+            }
+        }
+    
+        .product {
+            display: flex;
+            align-items: center;
+            flex: 0 0 33.333333%;
+    
+            img {
+                width: 100px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: $border-color;
+                max-width: 100%;
+                margin-right: 25px;
+            }
+        }
+    
+        .action-btn {
+            flex: 0 0 6.7%;
+    
+            .remove{
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                border: 1px solid #000;
+                padding: 0.3125rem 0.625rem;
+                cursor: pointer;
+            }
+        }
+    
+        .price, .qty, .total { flex: 0 0 16.666667%; }
+    
+        .total-items {
+            text-transform: lowercase;
+        }
+    
+        .subtotal {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.9375rem 1.25rem;
+    
+            .amount {
+                font-family: 'helveticabold';
+                flex: 0 0 27%;
+            }
+        }
+    }
+    
+}
