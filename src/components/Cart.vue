@@ -2,7 +2,7 @@
   <div class="shopping-cart">
     <p v-text="checkCart" v-if="checkCart"></p>
     <template v-else>
-      <h2 class="page-title">Shopping cart <span > - {{ cartCount }} {{ cartCount > 1 ? 'items' : 'item' }}</span></h2>
+      <h2 class="page-title">Shopping cart <span > - {{ totalCart }} {{ totalCart > 1 ? 'items' : 'item' }}</span></h2>
       <div class="heading">
         <div v-for="(heading, key) in headings" :key="key" :class="`heading-${key+1}`" v-text="heading"></div>
       </div>
@@ -63,6 +63,9 @@ export default {
           totalPrice: item.count * item.price
         }
       })
+    },
+    totalCart () {
+      return this.cart.length
     },
     subTotal () {
       return this.formattedCartItems.reduce((previousVal, currentval) => {
